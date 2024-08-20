@@ -1,11 +1,13 @@
-import Blog from "./Blog";
+import AllComponents from "./AllComponents";
+import { BrowserRouter } from "react-router-dom"
+ 
 
 function App({title}) {
   return (
     <div className="App">
-     <h1 style={{'text-align': 'center'}}>All blogs</h1>
-     <Blog message='hello world' number={42} />
-     
+      <BrowserRouter>
+        <AllComponents/>
+      </BrowserRouter>
     </div>
   );
 }
