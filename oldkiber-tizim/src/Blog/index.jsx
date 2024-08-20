@@ -1,11 +1,20 @@
+import BlogList from '../BlogList';
 import './style.scss'
+import { useState } from 'react';
 
-function Blog({ message, number }) {
+function Blog() {
+
+    const [blogs, setblogs] = useState([
+        {title: 'My new website', body: 'lorem ipsome...', author: 'Mario', id: 1 },
+        {title: 'Welcome party!', body: 'lorem ipsome...', author: 'Yoshi', id: 2 },
+        {title: 'web dev top tips', body: 'lorem ipsome...', author: 'Mario', id: 3 }
+    ])
+
     return ( 
-        <>
-            <h1>{message}</h1>
-            <h2>{number}</h2>
-        </>
+        <div className="vlogs">
+            <BlogList blogs={blogs} title='All blogs'/>
+            
+        </div>
      );
 }
 
