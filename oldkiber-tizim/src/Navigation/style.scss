@@ -1,0 +1,176 @@
+ .nav-cover {
+
+    a{
+        text-decoration: none;
+        color: gray;
+        padding: 10px 20px;
+        font-size: 16px;
+
+        &:hover{
+            color: orange;
+        }
+    }
+    .icon{
+        color: gray;
+        padding: 20px 0;
+
+        &:hover{
+            color: orange;
+        }
+    }
+    
+     .upnav{
+         display: grid;
+         grid-template-columns: 10rem 1fr 35%;
+         box-shadow: 1px 1px 5px #444;
+         color: gray;
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 1;
+         background-color: #333;
+         color: snow;
+         
+        .left-nav, .right-nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+
+        .left-nav{
+            .active{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+                
+            }
+        }
+            
+        .middle{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-right: 60px;
+            
+            .inp{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                width: 40%;
+                height: 20px;
+                border-radius: 20px;
+                background-color: rgb(230, 228, 228);
+                padding: 8px 15px 8px 0;
+                
+                input{
+                    padding: 9px 3px 9px 10px ;
+                    border: none;
+                    border-radius: 30px;
+                    outline: none;
+                    width: 95%;
+                    font-size: 14px;
+                    background-color: rgb(230, 228, 228);
+                }
+        
+            }
+        }
+        .right-nav{
+            
+            
+            .lang{
+                position: relative;
+                padding: 15px 0;
+                
+                p{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    padding: 0 5px 2px 5px; 
+                    cursor: pointer;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-weight: 500;
+                    color: gray;
+                    
+                }
+                
+                .down{
+                    display: none;
+                    position: absolute;
+                    top: 2.3rem;
+                    right: -1px;
+                    width: 7.5rem;
+                    height: 0;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    background-color: white;
+                    box-shadow: 1px 1px 5px #444;
+                    
+                    li{
+                        list-style-type: none;
+                        padding: 7px 10px;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            background-color: lightgray;
+                            color: white;
+                        }
+                    }
+                }
+                &:hover .down{
+                    display: block;
+                    height: 8rem;
+                    top: 3rem;
+                    
+                }
+                
+            }
+        }
+      
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 10%;
+        width: 6rem;
+        height: 100%;
+        box-shadow: 1px 1px 5px gray;
+        background-color: #333;
+        
+
+        &::-webkit-scrollbar{
+            background-color: gray;
+            width: 5px;
+            border-radius: 5px; 
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #444;
+            border-radius: 5px; 
+        }
+
+        &:hover{
+            overflow-y: auto;
+        }
+        
+        a{
+            border-bottom: 0.1px solid gray;
+        }
+    }
+}
+
+.outlet {
+    width: 88.4%;
+    height: 90vh;
+    margin:5% 0 0 6rem;
+    padding: 10px 40px 10px 20px;
+    background: url('../assets/images/edu-bg.jpg');
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: snow;
+}
