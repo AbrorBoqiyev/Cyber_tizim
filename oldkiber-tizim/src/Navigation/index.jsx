@@ -1,13 +1,14 @@
 import './style.scss'
 import Nav from './Nav';
 import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
 
 function Navigation() {
 
 
     return ( 
-        <div className="navigation-cover" >
+        <div className="all-cover" >
             <header>
                 < Nav />                
             </header>
@@ -17,7 +18,7 @@ function Navigation() {
             </div>
 
             <footer>
-
+                <Footer/>
             </footer>
         </div>
      );
