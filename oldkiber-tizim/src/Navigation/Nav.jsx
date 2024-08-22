@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import { GoQuestion } from "react-icons/go";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { BsBellFill } from "react-icons/bs";
@@ -15,13 +17,22 @@ import { LiaChartPieSolid } from "react-icons/lia";
 import { LuSettings } from "react-icons/lu";
 import { GiRadioactive } from "react-icons/gi";
 
+import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
+
+
+
 
 function Nav() {
+
+    
+
     return ( 
         <div className="nav-cover">
             <div className="upnav">
                     <div className="left-nav">
-                        <Link to={'/actives'} className="active"><GiRadioactive size={30} />Actives</Link>
+                        <div className="logo">
+                            <img src="" alt="logo" />
+                        </div>
                         <div className="plus">
                             <FiPlusCircle className='icon' size={20} />
                         </div>
@@ -65,15 +76,17 @@ function Nav() {
                 </div>
                 
                 <nav>
-                    
+                    <Link to={'/actives'} className="active"><GiRadioactive size={30} />Actives</Link>
                     <Link to={'/leads'}><BsBoxArrowInDown size={35} /> Leads</Link>
-                    <Link to={'/teachers'}><MdOutlinePerson2 size={50} />Teachers</Link>
-                    <Link to={'/groups'}> <LiaLayerGroupSolid size={50} />Groups</Link>
-                    <Link to={'/students'}><BsFillPersonFill size={50}/>Students</Link>
-                    <Link to={'/finance'}><RiRefund2Fill size={50}/>Finance</Link>
-                    <Link to={'/reports'}><LiaChartPieSolid size={50} />Reports</Link>
-                    <Link to={'/#settings'}><LuSettings size={50} fontWeight={100} />settings</Link>
-                    <Link to={'/#settings'}><LuSettings size={50} fontWeight={100} />settings</Link>
+                    <Link to={'/teachers'}><MdOutlinePerson2 size={40} />Teachers</Link>
+                    <Link to={'/groups'}> <LiaLayerGroupSolid size={40} />Groups</Link>
+                    <Link to={'/students'}><BsFillPersonFill size={40}/>Students</Link>
+                    <Link to={'/finance'}><RiRefund2Fill size={40}/>Finance</Link>
+                    <Link to={'/reports'}><LiaChartPieSolid size={40} />Reports</Link>
+                    <Link to={'/#settings'}><LuSettings size={40} fontWeight={100} />settings</Link>
+                    <span className="arrow"><IoIosArrowDropright size={40}  />  </span> 
+                     {/* <IoIosArrowDropleft /> : <IoIosArrowDropright /> */}
+                    
                 </nav>
         </div>
      );
