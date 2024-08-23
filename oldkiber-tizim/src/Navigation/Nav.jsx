@@ -2,27 +2,38 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import { GoQuestion } from "react-icons/go";
-import { MdOutlineWatchLater } from "react-icons/md";
-import { BsBellFill } from "react-icons/bs";
-import { BsArrowsFullscreen } from "react-icons/bs";
+import { MdOutlineWatchLater, MdOutlinePerson2 } from "react-icons/md";
+import { BsBellFill, BsArrowsFullscreen, BsBoxArrowInDown, BsFillPersonFill,} from "react-icons/bs";
 import { FiPlusCircle } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
+import { IoIosArrowDropright, IoIosSearch } from "react-icons/io";
 
-import { BsBoxArrowInDown } from "react-icons/bs";
-import { MdOutlinePerson2 } from "react-icons/md";
-import { LiaLayerGroupSolid } from "react-icons/lia";
-import { BsFillPersonFill } from "react-icons/bs";
+import { LiaChartPieSolid, LiaLayerGroupSolid } from "react-icons/lia";
 import { RiRefund2Fill } from "react-icons/ri";
-import { LiaChartPieSolid } from "react-icons/lia";
 import { LuSettings } from "react-icons/lu";
 import { GiRadioactive } from "react-icons/gi";
-
-import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
-
 
 
 
 function Nav() {
+
+    const [navStyle, setNavStyle] = useState(false)
+    
+    
+
+    const toggleNavbar = (e) => {
+        setNavStyle(prev => !prev)
+        
+        console.log(navStyle)
+    }
+
+
+    const strechNavbar = {
+         transform: navStyle ? 'rotate(180deg)' : 'rotate(0deg)',
+         left: navStyle ? '10.8rem' : '1rem',
+         width: navStyle ? '11.5rem' : '1.4rem',
+         opacity: navStyle ? '0' : '1',
+         chap: navStyle? '5rem' : '-4rem',
+    }
 
     
 
@@ -33,9 +44,13 @@ function Nav() {
                         <div className="logo">
                             <img src="" alt="logo" />
                         </div>
-                        <div className="plus">
-                            <FiPlusCircle className='icon' size={20} />
-                        </div>
+                        <h2 style={{
+                            opacity: strechNavbar.opacity,
+                            letterSpacing: '2rem',
+                            left: strechNavbar.chap
+                        }}>
+                            MENU
+                        </h2>
                     </div>
 
                     <div className='middle'>
@@ -75,19 +90,24 @@ function Nav() {
                     </div>
                 </div>
                 
-                <nav>
-                    <Link to={'/actives'} className="active"><GiRadioactive size={30} />Actives</Link>
-                    <Link to={'/leads'}><BsBoxArrowInDown size={35} /> Leads</Link>
-                    <Link to={'/teachers'}><MdOutlinePerson2 size={40} />Teachers</Link>
-                    <Link to={'/groups'}> <LiaLayerGroupSolid size={40} />Groups</Link>
-                    <Link to={'/students'}><BsFillPersonFill size={40}/>Students</Link>
-                    <Link to={'/finance'}><RiRefund2Fill size={40}/>Finance</Link>
-                    <Link to={'/reports'}><LiaChartPieSolid size={40} />Reports</Link>
-                    <Link to={'/#settings'}><LuSettings size={40} fontWeight={100} />settings</Link>
-                    <span className="arrow"><IoIosArrowDropright size={40}  />  </span> 
-                     {/* <IoIosArrowDropleft /> : <IoIosArrowDropright /> */}
+                <nav style={{width: strechNavbar.width}} >
+                    <Link className="links" to={'/actives'}><GiRadioactive size={30} />Faollar</Link>
+                    <Link className="links" to={'/leads'}><BsBoxArrowInDown size={35}  /> Leadlar</Link>
+                    <Link className="links" to={'/teachers'}><MdOutlinePerson2 size={40}  />O'qituvchilar</Link>
+                    <Link className="links" to={'/groups'}> <LiaLayerGroupSolid size={40}  />Guruhlar</Link>
+                    <Link className="links" to={'/students'}><BsFillPersonFill size={40} />Talabalar</Link>
+
+                    <span className="links menu" ><RiRefund2Fill size={40} />Moliya</span>
+                    <span className="links menu" ><LiaChartPieSolid size={40}  />Xisobot</span>
+                    <span className="links menu" ><LuSettings size={40}  fontWeight={100} />Sozlamalar</span>
                     
                 </nav>
+                <span onClick={toggleNavbar} >
+                    <IoIosArrowDropright className="arrow"  
+                        style={{transform: strechNavbar.transform, left: strechNavbar.left}} 
+                        size={40} 
+                    />  
+                </span>                     
         </div>
      );
 }
