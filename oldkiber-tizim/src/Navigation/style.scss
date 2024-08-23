@@ -32,7 +32,11 @@ body{
         text-decoration: none;
         color: rgb(247, 241, 241);
         padding: 10px 20px;
+<<<<<<< HEAD
         font-size: 18px;
+=======
+        font-size: 20px;
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
 
         &:hover{
             color: rgb(240, 94, 94);
@@ -40,7 +44,10 @@ body{
     }
     
     .nav-cover {
+<<<<<<< HEAD
         position: fixed;
+=======
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
     
         .icon{
             color: rgb(247, 242, 242);
@@ -55,12 +62,20 @@ body{
          .upnav{
              display: grid;
              grid-template-columns: 10rem 1fr 35%;
+<<<<<<< HEAD
              box-shadow: 1px 1px 5px cyan;
+=======
+             box-shadow: 1px 1px 5px #444;
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
              color: gray;
              position: fixed;
              top: 0;
              width: 100%;
+<<<<<<< HEAD
              z-index: 2;
+=======
+             z-index: 1;
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
              background-color: rgb(0,0,0, 0.6);
              backdrop-filter: blur(4px);
              color: snow;
@@ -73,6 +88,7 @@ body{
             }
     
             .left-nav{
+<<<<<<< HEAD
                 h2{
                     position: absolute;
                     top: 13rem;
@@ -80,6 +96,14 @@ body{
                     transform: rotate(-90deg);
                     color: cyan;
                     transition: 0.5s ease;
+=======
+                .active{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-left: 0;
+                    
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
                 }
             }
                 
@@ -178,17 +202,25 @@ body{
             display: flex;
             flex-direction: column;
             position: fixed;
+<<<<<<< HEAD
             top: 10%;
             width: 1.4rem;  
+=======
+            top: 11.5%;
+            width: 10rem;
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
             height: 100%;
             box-shadow: 1px 1px 5px cyan;
             background: linear-gradient( to right bottom, rgb(0,0,0,0.6), rgb(8, 250, 250, 0.1));
             backdrop-filter: blur(3px);
+<<<<<<< HEAD
             overflow: hidden;
             transition: width 0.5s ease;
             z-index: 1;
 
             
+=======
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
             
     
             &::-webkit-scrollbar{
@@ -201,6 +233,7 @@ body{
                 border-radius: 5px; 
             }
             
+<<<<<<< HEAD
             .links{
                 display: flex;
                 justify-content: start;
@@ -235,6 +268,26 @@ body{
 
             &:hover{
                 color: cyan ;
+=======
+            a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 0.1px solid gray;
+            }
+
+            .arrow{
+                position: fixed;
+                top: 15rem;
+                left: 9.5rem;
+                color: rgb(235, 232, 232);
+                cursor: pointer;
+                border: none;
+
+                &:hover{
+                    color: cyan ;
+                }
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
             }
         }
     }
@@ -258,9 +311,13 @@ body{
         background-color: rgb(0,0,0, 0.8);
         backdrop-filter: blur(4px);
         box-sizing: border-box;
+<<<<<<< HEAD
         padding: 20px 40px 20px 12rem;
         
        
+=======
+        padding: 20px 40px 20px 8rem;
+>>>>>>> 119b1843ec7a48d7e7d98606656f49674d92285e
 
         Link{
             display: flex;
